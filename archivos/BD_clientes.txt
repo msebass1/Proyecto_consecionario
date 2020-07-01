@@ -1,0 +1,4 @@
+            Id           |          Nombre         |         Apellido        |        Dirección        |         Teléfono        |          Ciudad        
+        1002271093       |      Julian Steven      |        Vega Daza        |   Trans 70G 63-52 Sur   |        3144875425       |          Bogota         
+       30651625135       |      Johan Esteban      |        Vega Daza        |   Calle 63 carre 7 Sur  |        3055670987       |         Caracas         
+         2213251         |         alguine         |         belñeño         |   calle 146 f # 76 06   |         5265904         |         bogot´aá        

@@ -1,0 +1,57 @@
+Ayuda menú de opciones
+
+1) Añadir información de los clientes:
+
+  Por medio de este módulo puede ingresar la información personal de los clientes listada a continuación;
+
+  ID: número de identificación del cliente
+  Nombre: nombre del cliente
+  Apellido: apellido del cliente
+  Dirección: dirección del domicilio del cliente
+  Teléfono: teléfono fijo o celular del cliente
+  Ciudad: ciudad de residencia del cliente
+
+  Guardara toda la información registrada en la base de datos BD_clientes.txt
+
+2) Añadir información de vehículos de cliente: 
+  Por medio de este módulo puede ingresar la información de los vehículos de un cliente listada a continuación;
+
+  Placa: placa del vehículo
+  Marca: marca del vehículo
+  Modelo: año de manufacturación del vehículo
+  Cilindraje: cilindraje del vehículo
+  Color: color del vehículo
+  Tipo: Tipo de vehículo
+  Combustible: Tipo de combustible que utiliza el vehículo
+  Pasajeros: Cantidad de pasajeros que el vehículo puede llevar a bordo
+  Carga: Capacidad de carga del vehiculo
+  Chasis: Numero del chasis del vehículo
+  Motor:Numero de motor del vehículo
+  Id Dueño: Número de identificación del cliente
+
+  Guardara toda la información registrada en un modelo llamando BD_clientes.txt
+
+3) Añadir información de servicios del concesionario: 
+  Por medio de este módulo puede ingresar la información de los servicios que presta su concesionario:
+
+  Código: Código del servicio a prestar
+  Nombre: Nombre del servicio a prestar
+  Precio: Valor del servicio por horas
+
+4) Buscar información de los clientes: 
+  Por medio de este módulo puede buscar la información que haya sido ingresada anteriormente (por medio del módulo (1)) por medio del orden o por medio de su identificador, si toma la opcion orden, esta le imprimira todos los clientes que tiene dependiendo de como quiere ordenarlos, si elige la opcion identificador, esta le imprimira la información de los clientes que cumplen con la información que ud le pida al programa ya sea ciudad, Id, etc.
+
+5) Buscar información de vehículos de clientes:  
+  Por medio de este módulo puede buscar la información de los vehículos de sus clientes que haya sido ingresada anteriormente (por medio del módulo (2)) por medio del orden o por medio de su identificador, si toma la opcion orden, esta le imprimira todos los autos de clientes que tiene dependiendo de como quiere ordenarlos, si elige la opcion identificador, esta le imprimira la información de los autos de los clientes que cumplen con la información que ud le pida al programa ya sea placa, marca, etc.
+
+6) Buscar información de servicios del concesionario:  
+  Por medio de este módulo puede buscar la información de los servicios que haya sido ingresada anteriormente (por medio del módulo (3)) por medio del orden o por medio de su identificador, si toma la opción orden, esta le imprimira todos los servicios que tiene dependiendo de como quiere ordenarlos, si elige la opcion identificador, esta le imprimira la información de los servicios que cumplen con la información que ud le pida al programa ya sea codigo, nombre, etc.
+
+7) Buscar información de facturas: 
+  Por medio de este módulo puede buscar la información de las facturas de los servicios prestados previamente. por medio del orden o por medio de su identificador, si toma la opción orden, esta le imprimira todos las facturas que tiene dependiendo de como quiere ordenarlas, si elige la opcion identificador, esta le imprimira la información de los servicios que cumplen con la información que ud le pida al programa ya sea codigo, id, etc.
+
+8) Solicitar un servicio del concesionario:  
+  Por medio de este módulo puede solicitar los servicios que se le van a prestar a un cliente, al finalizar el proceso se generará una factura donde se incluye la información del cliente, del vehículo del cliente, y los servicios prestados, generara un archivo que equivaldra a la factura del servicio prestado con numero de identificacion unico.
+
+9) Salir: 
+  Por medio de este módulo puede cerrar el programa.

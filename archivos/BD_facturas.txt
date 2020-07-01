@@ -1,0 +1,4 @@
+       Codigofactura     |            Id           |          Placa          |     CodigoServicio      |          Horas          |          Total          
+            1            |        1002271093       |          ZXC123         |            1            |            20           |          600000         
+            2            |        1002271093       |          ZXC123         |            1            |            12           |          360000         
+            3            |        1002271093       |          ZXC123         |            1            |            20           |          600000         

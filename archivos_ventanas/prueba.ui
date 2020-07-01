@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>684</width>
+    <height>575</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QQuickWidget" name="quickWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>661</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="resizeMode">
+     <enum>QQuickWidget::SizeRootObjectToView</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>631</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Menlo</family>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="title">
+     <string>GroupBox</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QPushButton" name="btn_autos">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>70</y>
+       <width>171</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Autos</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_clientes">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>171</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clientes</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_servicios">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>220</y>
+       <width>171</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Servicios</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_facturas">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>220</y>
+       <width>171</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>facturas</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_solicitud">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>350</y>
+       <width>221</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Solicitar Servicios</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ayuda">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>390</y>
+       <width>97</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ayuda</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>20</y>
+       <width>471</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bienvenido al sistema de gestion de consecionario</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>684</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

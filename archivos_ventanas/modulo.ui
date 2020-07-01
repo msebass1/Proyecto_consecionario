@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>684</width>
+    <height>575</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QQuickWidget" name="quickWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>661</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="resizeMode">
+     <enum>QQuickWidget::SizeRootObjectToView</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>611</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="btn_inicio">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>270</y>
+       <width>161</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>inicio</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="etiqueta_tipo">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>20</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Menlo</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Estado</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="creacion">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>120</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Crear</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Id">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>160</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Buscar por identificador</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="seleccion_id">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>70</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>seleccione...</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>direccion</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>telefono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ciudad</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>nombre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>apellido</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="id">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>110</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ingrese el identificador</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="seleccion_orden">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>260</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>seleccione...</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>direccion</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>telefono</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ciudad</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>nombre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>apellido</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="btn_orden">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>310</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Buscar por orden</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>684</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
