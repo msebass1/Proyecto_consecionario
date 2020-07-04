@@ -111,36 +111,6 @@
        <string>seleccione...</string>
       </property>
      </item>
-     <item>
-      <property name="text">
-       <string>ID</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>direccion</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>telefono</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>ciudad</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>nombre</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>apellido</string>
-      </property>
-     </item>
     </widget>
     <widget class="QLineEdit" name="id">
      <property name="geometry">
@@ -167,36 +137,6 @@
      <item>
       <property name="text">
        <string>seleccione...</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>ID</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>direccion</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>telefono</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>ciudad</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>nombre</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>apellido</string>
       </property>
      </item>
     </widget>

@@ -15,8 +15,8 @@ class Ventana(QtWidgets.QMainWindow):
         self.ui = VentanaPrincipal()
         self.ui.setupUi(self)
         self.ui.ayuda.clicked.connect(self.ayuda)
-        self.ui.btn_autos.clicked.connect(self.clientes)
-        self.ui.btn_clientes.clicked.connect(self.autos)
+        self.ui.btn_autos.clicked.connect(self.autos)
+        self.ui.btn_clientes.clicked.connect(self.clientes)
         self.ui.btn_servicios.clicked.connect(self.servicios)
         self.ui.btn_facturas.clicked.connect(self.facturas)
         self.ui.btn_solicitud.clicked.connect(self.solicitud)
@@ -29,34 +29,88 @@ class Ventana(QtWidgets.QMainWindow):
         self.ui.btn_inicio.clicked.connect(self.inicio)
 
     def clientes(self):
+        self.tipo = "cliente"
         self.ui = VentanaModulo()
         self.ui.setupUi(self)
-        self.ui.etiqueta_tipo.setText("clientes")
+        self.setupSeleccion()
+        self.ui.etiqueta_tipo.setText(self.tipo)
         self.ui.btn_inicio.clicked.connect(self.inicio)
-
+        self.ui.btn_orden.clicked.connect(self.busquedaOrden)
+        self.ui.btn_Id.clicked.connect(self.busquedaId)
 
     def autos(self):
+        self.tipo = "auto"
         self.ui = VentanaModulo()
         self.ui.setupUi(self)
+        self.setupSeleccion()
         self.ui.etiqueta_tipo.setText("autos")
         self.ui.btn_inicio.clicked.connect(self.inicio)
+        self.ui.btn_orden.clicked.connect(self.busquedaOrden)
+        self.ui.btn_Id.clicked.connect(self.busquedaId)
     
     def servicios(self):
+        self.tipo = "servicio"
         self.ui = VentanaModulo()
         self.ui.setupUi(self)
+        self.setupSeleccion()
         self.ui.etiqueta_tipo.setText("servicios")
         self.ui.btn_inicio.clicked.connect(self.inicio)
+        self.ui.btn_orden.clicked.connect(self.busquedaOrden)
+        self.ui.btn_Id.clicked.connect(self.busquedaId)
         
     def facturas(self):
+        self.tipo = "factura"
         self.ui = VentanaModulo()
         self.ui.setupUi(self)
+        self.setupSeleccion()
         self.ui.creacion.hide()
         self.ui.etiqueta_tipo.setText("facturas")
         self.ui.btn_inicio.clicked.connect(self.inicio)
+        self.ui.btn_orden.clicked.connect(self.busquedaOrden)
+        self.ui.btn_Id.clicked.connect(self.busquedaId)
+
     def solicitud(self):
         self.ui.groupBox.hide()
+
+    def setupSeleccion(self):
+        elementos = archivo.leerinfo(self.tipo)
+        for elemen in elementos:
+            self.ui.seleccion_orden.addItem(elemen)
+            self.ui.seleccion_id.addItem(elemen)
+
+    def busquedaId(self):
+        identificador = self.ui.id.text()
+        seleccion = self.ui.seleccion_id.currentText()
+        datos = archivo.busqueda_identificador("archivos/BD_"+self.tipo+"s.txt",seleccion,identificador)
+        self.busqueda(datos)
+
+    def busquedaOrden(self):
+        seleccion = self.ui.seleccion_orden.currentText() #no cambiar el orden
+        datos = (archivo.busqueda_orden("archivos/BD_"+self.tipo+"s.txt",seleccion)) 
+        self.busqueda(datos)
+        
+    def busqueda(self, datos):
+
+        self.ui = VentanaBusqueda()
+        self.ui.setupUi(self)
+        self.ui.btn_inicio.clicked.connect(self.inicio)
+
+        self.ui.tabla_busqueda.setColumnCount(len(datos[0].keys()))
+        self.ui.tabla_busqueda.setRowCount(len(datos)+1)
+
+        i = 0 
+        j = 1
+        for caracteristica in datos[0].keys():
+            self.ui.tabla_busqueda.setItem(0,i,QtWidgets.QTableWidgetItem(caracteristica))
+            i += 1 
+            for dato in datos:
+               self.ui.tabla_busqueda.setItem(j,i-1,QtWidgets.QTableWidgetItem(dato[caracteristica]))
+               j += 1
+            j = 1
+
 
 app = QtWidgets.QApplication([])
 application = Ventana()
 application.show()
+archivo = modelos.Principal("persona") 
 sys.exit(app.exec())

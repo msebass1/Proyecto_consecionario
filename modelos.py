@@ -35,10 +35,10 @@ class Principal(object):
     elif tipo == 'auto':
       datos = ['Placa','Marca','Modelo','Cilindrada','Color','Tipo','Combustibe','Número de Pasajeros','Capacidad de Carga','Número de Chasis','Número de Motor','Id_Dueño']
     elif tipo == 'servicio':
-      datos = ['Codigo','Nombre','Precio por hora']
+      datos = ['Codigo','Nombre','Precio']
     elif tipo == 'factura':
-      datos = ['Id_Cliente','Placa','CodigoServicio','horas realizadas']
-    return self.info(datos, tipo)
+      datos = ['Codigofactura','Id','CodigoServicio','Horas']
+    return datos
 
   def ordenada(self, linea):
     X = linea.split("|")
@@ -70,13 +70,11 @@ class Principal(object):
         resul.append(a)
     return resul  
   
-  def busqueda_identificador(self,archivo,tipo):
+  def busqueda_identificador(self,archivo,tipo,identificador):
     lista = self.leerBaseDatos(archivo)
     ans = []
-    print()
-    w = input('Ingrese '+tipo+' a buscar: ')
     for diccionario in lista:
-      if diccionario[tipo] == w:
+      if diccionario[tipo] == identificador:
         ans.append(diccionario)
     return ans
 
@@ -104,7 +102,7 @@ class Principal(object):
 class Persona(Principal):
 
   def busqueda(self):
-    dic = {'1':'Id','2':'Nombre','3':'Apellido','4':'Dirección','5':'Teléfono','6':'Ciudad'}
+    dic = {'1':'Id','2':'nombre','3':'apellido','4':'dirección','5':'teléfono','6':'ciudad'}
     print('Seleccione como desea buscar: \n')
     print(' 1) Busqueda por orden \n 2) Busqueda por identificador\n')
     estado = input('¿Comó desea buscar?: ')
