@@ -90,7 +90,6 @@ class Ventana(QtWidgets.QMainWindow):
         self.busqueda(datos)
         
     def busqueda(self, datos):
-
         self.ui = VentanaBusqueda()
         self.ui.setupUi(self)
         self.ui.btn_inicio.clicked.connect(self.inicio)
