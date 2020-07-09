@@ -3,6 +3,7 @@ from ventanas.principal import VentanaPrincipal
 from ventanas.ayuda import VentanaAyuda
 from ventanas.modulo import VentanaModulo
 from ventanas.busqueda import VentanaBusqueda
+from ventanas.creacion import VentanaCreacion
 import modelos
 import sys
 
@@ -17,9 +18,9 @@ class Ventana(QtWidgets.QMainWindow):
         self.ui.ayuda.clicked.connect(self.ayuda)
         self.ui.btn_autos.clicked.connect(self.autos)
         self.ui.btn_clientes.clicked.connect(self.clientes)
-        self.ui.btn_servicios.clicked.connect(self.servicios)
         self.ui.btn_facturas.clicked.connect(self.facturas)
         self.ui.btn_solicitud.clicked.connect(self.solicitud)
+        self.ui.btn_servicios.clicked.connect(self.servicios)
      
     def ayuda(self):
         self.ui = VentanaAyuda()
@@ -37,6 +38,7 @@ class Ventana(QtWidgets.QMainWindow):
         self.ui.btn_inicio.clicked.connect(self.inicio)
         self.ui.btn_orden.clicked.connect(self.busquedaOrden)
         self.ui.btn_Id.clicked.connect(self.busquedaId)
+        self.ui.creacion.clicked.connect(self.crear)
 
     def autos(self):
         self.tipo = "auto"
@@ -47,6 +49,7 @@ class Ventana(QtWidgets.QMainWindow):
         self.ui.btn_inicio.clicked.connect(self.inicio)
         self.ui.btn_orden.clicked.connect(self.busquedaOrden)
         self.ui.btn_Id.clicked.connect(self.busquedaId)
+        self.ui.creacion.clicked.connect(self.crear)
     
     def servicios(self):
         self.tipo = "servicio"
@@ -57,7 +60,8 @@ class Ventana(QtWidgets.QMainWindow):
         self.ui.btn_inicio.clicked.connect(self.inicio)
         self.ui.btn_orden.clicked.connect(self.busquedaOrden)
         self.ui.btn_Id.clicked.connect(self.busquedaId)
-        
+        self.ui.creacion.clicked.connect(self.crear)
+
     def facturas(self):
         self.tipo = "factura"
         self.ui = VentanaModulo()
@@ -106,6 +110,14 @@ class Ventana(QtWidgets.QMainWindow):
                self.ui.tabla_busqueda.setItem(j,i-1,QtWidgets.QTableWidgetItem(dato[caracteristica]))
                j += 1
             j = 1
+
+    def crear(self):
+        self.ui = VentanaCreacion()
+        self.ui.setupUi(self)
+        self.ui.btn_inicio.clicked.connect(self.inicio)
+        elementos = archivo.leerinfo(self.tipo)
+        for elemento in elementos:
+            print(elemento)                
 
 
 app = QtWidgets.QApplication([])
